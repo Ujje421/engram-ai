@@ -1,0 +1,51 @@
+[
+  {
+    "id": "src-log-001",
+    "type": "log",
+    "uri": "logs/payment-api/2026-09-15.log",
+    "content_hash": "hash_a1",
+    "trusted": true
+  },
+  {
+    "id": "src-ticket-001",
+    "type": "ticket",
+    "uri": "jira/PAY-1234",
+    "content_hash": "hash_b1",
+    "trusted": true
+  },
+  {
+    "id": "src-doc-runbook",
+    "type": "doc",
+    "uri": "docs/runbook-payment.md",
+    "content_hash": "hash_c1",
+    "trusted": true
+  },
+  {
+    "id": "src-doc-postmortem",
+    "type": "doc",
+    "uri": "docs/postmortem-001.md",
+    "content_hash": "hash_d1",
+    "trusted": true
+  },
+  {
+    "id": "src-agent-output",
+    "type": "agent_output",
+    "uri": "agent://investigator/session-1",
+    "content_hash": "hash_e1",
+    "trusted": true
+  },
+  {
+    "id": "src-log-005",
+    "type": "log",
+    "uri": "logs/payment-api/2026-10-10.log",
+    "content_hash": "hash_f1",
+    "trusted": true
+  },
+  {
+    "id": "src-poisoned",
+    "type": "ticket",
+    "uri": "external://untrusted-feed/claim-42",
+    "content_hash": "hash_poison",
+    "trusted": false
+  }
+]

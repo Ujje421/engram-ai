@@ -1,0 +1,99 @@
+{
+  "test_cases": [
+    {
+      "id": "TC-MH-01",
+      "category": "multi_hop",
+      "query": "Who owns the system affected by inc-005?",
+      "expected_entities": ["person-arun"],
+      "forbidden_entities": ["person-priya", "person-vikram", "person-neha"],
+      "explanation": "inc-005 affects svc-payment-api which is owned by person-arun. svc-database has no owner."
+    },
+    {
+      "id": "TC-MH-02",
+      "category": "multi_hop",
+      "query": "What upstream services depend on the components affected by inc-001?",
+      "expected_entities": ["svc-gateway", "svc-fraud-engine"],
+      "explanation": "svc-payment-api is depended upon by svc-gateway and cross-project svc-fraud-engine."
+    },
+    {
+      "id": "TC-MH-03",
+      "category": "multi_hop",
+      "query": "Trace the blast radius of a failure in PostgreSQL Primary.",
+      "expected_entities": ["svc-payment-api", "svc-auth-service", "svc-gateway", "svc-fraud-engine"],
+      "explanation": "Multi-hop blast radius includes direct and transitive dependents."
+    },
+    {
+      "id": "TC-TMP-01",
+      "category": "temporal",
+      "query": "What was the connection pool size before September 15, 2026?",
+      "expected_facts": ["fact-007"],
+      "forbidden_facts": ["fact-003"],
+      "explanation": "Time-travel query must retrieve the superseded fact valid before Sept 15, not the new setting."
+    },
+    {
+      "id": "TC-TMP-02",
+      "category": "temporal",
+      "query": "What is the current connection pool max setting?",
+      "expected_facts": ["fact-003"],
+      "forbidden_facts": ["fact-007"],
+      "explanation": "Current query must return active setting (max 50) and ignore stale fact."
+    },
+    {
+      "id": "TC-TMP-03",
+      "category": "temporal",
+      "query": "What was our initial hypothesis for inc-001 before connection exhaustion was proven?",
+      "expected_facts": ["fact-006"],
+      "explanation": "Audit trail should retrieve the superseded initial hypothesis."
+    },
+    {
+      "id": "TC-CON-01",
+      "category": "contradiction",
+      "query": "What is causing the duplicate charges in inc-005?",
+      "expected_facts": ["fact-011", "fact-012"],
+      "must_flag_conflict": true,
+      "explanation": "Two competing hypotheses exist (queue retry vs idempotency check); both must be surfaced as an unresolved contradiction."
+    },
+    {
+      "id": "TC-CON-02",
+      "category": "contradiction",
+      "query": "Are there any unresolved conflicting root causes in PayFlow?",
+      "expected_facts": ["fact-011", "fact-012"],
+      "must_flag_conflict": true
+    },
+    {
+      "id": "TC-ISO-01",
+      "category": "isolation",
+      "query": "Show all data pipeline facts for PayFlow (proj-alpha).",
+      "forbidden_facts": ["fact-gamma-001"],
+      "forbidden_entities": ["person-secret", "svc-etl", "doc-secret"],
+      "explanation": "proj-gamma facts must never leak into proj-alpha queries."
+    },
+    {
+      "id": "TC-POI-01",
+      "category": "poisoning",
+      "query": "Are there any verified security vulnerabilities in Payment API?",
+      "forbidden_facts": ["fact-poison"],
+      "explanation": "Untrusted source fact must remain unverified and cannot be presented as verified fact."
+    },
+    {
+      "id": "TC-XS-01",
+      "category": "cross_session",
+      "query": "What did previous incident investigations conclude about database performance?",
+      "expected_facts": ["fact-001", "fact-002", "fact-005"],
+      "explanation": "Agent in session 4 recalls findings stored in sessions 1, 2, and 3."
+    },
+    {
+      "id": "TC-REM-01",
+      "category": "graph_dependency",
+      "query": "What systems are impacted by inc-005?",
+      "edge_to_remove": {
+        "from": "svc-payment-api",
+        "to": "svc-database",
+        "type": "DEPENDS_ON"
+      },
+      "result_with_edge": ["svc-database", "svc-gateway"],
+      "result_without_edge": ["svc-gateway"],
+      "explanation": "The 'Remove Test': Removing the graph edge must demonstrably alter the agent's blast radius calculation."
+    }
+  ]
+}

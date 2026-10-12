@@ -1,0 +1,39 @@
+[
+  {"id": "person-arun", "project_id": "proj-alpha", "type": "person", "name": "Arun Mehta"},
+  {"id": "person-priya", "project_id": "proj-alpha", "type": "person", "name": "Priya Sharma"},
+  {"id": "person-vikram", "project_id": "proj-alpha", "type": "person", "name": "Vikram Patel"},
+  {"id": "person-neha", "project_id": "proj-alpha", "type": "person", "name": "Neha Gupta"},
+  {"id": "person-rohan", "project_id": "proj-alpha", "type": "person", "name": "Rohan Kumar"},
+  {"id": "person-sara", "project_id": "proj-alpha", "type": "person", "name": "Sara Chen"},
+
+  {"id": "svc-payment-api", "project_id": "proj-alpha", "type": "service", "name": "Payment API"},
+  {"id": "svc-auth-service", "project_id": "proj-alpha", "type": "service", "name": "Auth Service"},
+  {"id": "svc-notification", "project_id": "proj-alpha", "type": "service", "name": "Notification Service"},
+  {"id": "svc-gateway", "project_id": "proj-alpha", "type": "component", "name": "API Gateway"},
+  {"id": "svc-queue", "project_id": "proj-alpha", "type": "component", "name": "Message Queue"},
+  {"id": "svc-cache", "project_id": "proj-alpha", "type": "component", "name": "Redis Cache"},
+  {"id": "svc-database", "project_id": "proj-alpha", "type": "component", "name": "PostgreSQL Primary"},
+
+  {"id": "inc-001", "project_id": "proj-alpha", "type": "incident", "name": "Payment timeout spike", "timestamp": "2026-09-15"},
+  {"id": "inc-002", "project_id": "proj-alpha", "type": "incident", "name": "Auth token refresh failure", "timestamp": "2026-09-22"},
+  {"id": "inc-003", "project_id": "proj-alpha", "type": "incident", "name": "Gateway 502 errors", "timestamp": "2026-10-01"},
+  {"id": "inc-004", "project_id": "proj-alpha", "type": "incident", "name": "Queue message backlog", "timestamp": "2026-10-05"},
+  {"id": "inc-005", "project_id": "proj-alpha", "type": "incident", "name": "Payment duplicate charges", "timestamp": "2026-10-10"},
+
+  {"id": "doc-runbook-payment", "project_id": "proj-alpha", "type": "document", "name": "Payment API Runbook", "uri": "docs/runbook-payment.md"},
+  {"id": "doc-postmortem-001", "project_id": "proj-alpha", "type": "document", "name": "Inc-001 Postmortem", "uri": "docs/postmortem-001.md"},
+  {"id": "doc-arch-auth", "project_id": "proj-alpha", "type": "document", "name": "Auth Service Architecture", "uri": "docs/arch-auth.md"},
+  {"id": "doc-sla-payment", "project_id": "proj-alpha", "type": "document", "name": "Payment SLA Agreement", "uri": "docs/sla-payment.md"},
+
+  {"id": "person-amit", "project_id": "proj-beta", "type": "person", "name": "Amit Desai"},
+  {"id": "person-lisa", "project_id": "proj-beta", "type": "person", "name": "Lisa Wang"},
+  {"id": "svc-fraud-engine", "project_id": "proj-beta", "type": "service", "name": "Fraud Engine"},
+  {"id": "svc-risk-scorer", "project_id": "proj-beta", "type": "service", "name": "Risk Scorer"},
+  {"id": "svc-fraud-alerts", "project_id": "proj-beta", "type": "service", "name": "Fraud Alerts"},
+  {"id": "inc-beta-001", "project_id": "proj-beta", "type": "incident", "name": "False positive spike", "timestamp": "2026-09-28"},
+  {"id": "inc-beta-002", "project_id": "proj-beta", "type": "incident", "name": "Risk scorer latency", "timestamp": "2026-10-08"},
+
+  {"id": "person-secret", "project_id": "proj-gamma", "type": "person", "name": "Classified User"},
+  {"id": "svc-etl", "project_id": "proj-gamma", "type": "service", "name": "ETL Pipeline"},
+  {"id": "doc-secret", "project_id": "proj-gamma", "type": "document", "name": "Classified Report", "uri": "docs/classified-report.md"}
+]

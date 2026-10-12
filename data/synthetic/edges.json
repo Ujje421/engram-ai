@@ -1,0 +1,33 @@
+[
+  {"type": "DEPENDS_ON", "from": "svc-payment-api", "to": "svc-auth-service"},
+  {"type": "DEPENDS_ON", "from": "svc-payment-api", "to": "svc-database"},
+  {"type": "DEPENDS_ON", "from": "svc-payment-api", "to": "svc-cache"},
+  {"type": "DEPENDS_ON", "from": "svc-payment-api", "to": "svc-queue"},
+  {"type": "DEPENDS_ON", "from": "svc-notification", "to": "svc-queue"},
+  {"type": "DEPENDS_ON", "from": "svc-gateway", "to": "svc-payment-api"},
+  {"type": "DEPENDS_ON", "from": "svc-gateway", "to": "svc-auth-service"},
+  {"type": "DEPENDS_ON", "from": "svc-fraud-engine", "to": "svc-risk-scorer"},
+  {"type": "DEPENDS_ON", "from": "svc-fraud-alerts", "to": "svc-fraud-engine"},
+  {"type": "DEPENDS_ON", "from": "svc-fraud-engine", "to": "svc-payment-api"},
+
+  {"type": "OWNS", "from": "person-arun", "to": "svc-payment-api"},
+  {"type": "OWNS", "from": "person-priya", "to": "svc-auth-service"},
+  {"type": "OWNS", "from": "person-vikram", "to": "svc-notification"},
+  {"type": "OWNS", "from": "person-neha", "to": "svc-gateway"},
+  {"type": "OWNS", "from": "person-rohan", "to": "svc-queue"},
+  {"type": "OWNS", "from": "person-sara", "to": "svc-cache"},
+
+  {"type": "AFFECTS", "from": "inc-001", "to": "svc-payment-api"},
+  {"type": "AFFECTS", "from": "inc-002", "to": "svc-auth-service"},
+  {"type": "AFFECTS", "from": "inc-003", "to": "svc-gateway"},
+  {"type": "AFFECTS", "from": "inc-003", "to": "svc-payment-api"},
+  {"type": "AFFECTS", "from": "inc-004", "to": "svc-queue"},
+  {"type": "AFFECTS", "from": "inc-004", "to": "svc-notification"},
+  {"type": "AFFECTS", "from": "inc-005", "to": "svc-payment-api"},
+  {"type": "AFFECTS", "from": "inc-005", "to": "svc-database"},
+
+  {"type": "RESOLVED_BY", "from": "inc-001", "to": "person-arun"},
+  {"type": "RESOLVED_BY", "from": "inc-002", "to": "person-priya"},
+  {"type": "RESOLVED_BY", "from": "inc-003", "to": "person-neha"},
+  {"type": "RESOLVED_BY", "from": "inc-004", "to": "person-rohan"}
+]

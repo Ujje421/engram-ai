@@ -1,0 +1,26 @@
+[
+  {
+    "id": "agent-inv",
+    "name": "InvestigatorBot",
+    "role": "investigator",
+    "trust_level": "medium"
+  },
+  {
+    "id": "agent-know",
+    "name": "KnowledgeBot",
+    "role": "knowledge_retriever",
+    "trust_level": "medium"
+  },
+  {
+    "id": "agent-res",
+    "name": "ResolverBot",
+    "role": "resolver",
+    "trust_level": "high"
+  },
+  {
+    "id": "agent-ver",
+    "name": "VerifierBot",
+    "role": "verifier",
+    "trust_level": "high"
+  }
+]

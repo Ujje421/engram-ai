@@ -1,0 +1,42 @@
+[
+  {
+    "id": "sess-1",
+    "agent_id": "agent-inv",
+    "project_id": "proj-alpha",
+    "started_at": 1789480800,
+    "ended_at": 1789482600,
+    "status": "closed"
+  },
+  {
+    "id": "sess-2",
+    "agent_id": "agent-know",
+    "project_id": "proj-alpha",
+    "started_at": 1789481700,
+    "ended_at": 1789483500,
+    "status": "closed"
+  },
+  {
+    "id": "sess-3",
+    "agent_id": "agent-res",
+    "project_id": "proj-alpha",
+    "started_at": 1789484400,
+    "ended_at": 1789485600,
+    "status": "closed"
+  },
+  {
+    "id": "sess-4",
+    "agent_id": "agent-inv",
+    "project_id": "proj-alpha",
+    "started_at": 1791626400,
+    "ended_at": null,
+    "status": "active"
+  },
+  {
+    "id": "sess-5",
+    "agent_id": "agent-inv",
+    "project_id": "proj-beta",
+    "started_at": 1791448800,
+    "ended_at": 1791450600,
+    "status": "closed"
+  }
+]

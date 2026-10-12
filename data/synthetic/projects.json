@@ -1,0 +1,17 @@
+[
+  {
+    "id": "proj-alpha",
+    "name": "PayFlow",
+    "description": "Payment processing platform"
+  },
+  {
+    "id": "proj-beta",
+    "name": "ShieldGuard",
+    "description": "Fraud detection system"
+  },
+  {
+    "id": "proj-gamma",
+    "name": "DataVault",
+    "description": "Data analytics pipeline (minimal — exists for isolation tests)"
+  }
+]
