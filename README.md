@@ -292,7 +292,7 @@ ORDER BY f.tx_from ASC
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YourUsername/engram-ai.git
+git clone https://github.com/ujje421/engram-ai.git
 cd engram-ai
 
 # 2. Configure environment
